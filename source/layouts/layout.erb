@@ -11,24 +11,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <!-- vendor js -->
+        <%= javascript_include_tag 'js/vendor/modernizr-2.6.1.min.js' %>
+        <%= javascript_include_tag '//code.jquery.com/jquery-1.11.0.min.js' %>
+        <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+
+        <!-- vendor css -->
+        <%= stylesheet_link_tag 'css/normalize.css' %>
+        <%= stylesheet_link_tag 'css/main.css' %>
+        <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <h1>Friedman Tutoring</h1>
+        <div class="container">
+            <h1>Friedman Tutoring</h1>
 
-        <%= yield %>
+            <%= yield %>
 
-        <%= partial "contact" %>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            <%= partial "contact" %>
+        </div>
     </body>
 </html>
