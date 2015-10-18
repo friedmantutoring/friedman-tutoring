@@ -1,0 +1,42 @@
+---
+title: "Friedman Tutoring - Background"
+qualifications:
+    -
+        header: "Teaching Experience"
+        description: "Primarily as a Learning Specialist and Academic Tutor, Laurie has taught a variety of subjects, including study skills, to K-12 students in Boston-area schools for over seventeen years:"
+        experiences:
+            - "The Fessenden School, 2014 to present"
+            - "Brimmer and May School, 2014 to present"
+            - "Chapel Hill-Chauncy Hall School, 2007-2014"
+            - "Solomon Schechter Day School of Greater Boston, 2007"
+            - "The Chestnut Hill School, 2006"
+            - "Newton Public Schools, Underwood Elementary, 2004-2006"
+            - "Boston Public Schools, Ohrenberger Elementary, 2001-2004"
+            - "Manter Hall School, 1984-1985"
+            - "Landmark School, 1982-1984"
+    -
+        header: "Education"
+        experiences:
+            - Master of Arts in Teaching (English), University of Chicago
+            - Master of Business Administration, Simmons College
+            - Bachelor of Arts, Oberlin College
+            - High School, University of Chicago Laboratory School
+    -
+        header: "Massachusetts Teaching Certification"
+        experiences:
+            - Early childhood education
+            - Elementary education
+            - Middle school Math
+            - High school English
+---
+<div class="description">
+<% current_page.data.qualifications.each do | qualification | %>
+    <h2><%= qualification.header %></h2>
+    <% if qualification.description %><p><%= qualification.description %></p><% end %>
+    <ul>
+    <% qualification.experiences.each do |experience| %>
+        <li><%= experience %></li>
+    <% end %>
+    </ul>
+<% end %>
+</div>
