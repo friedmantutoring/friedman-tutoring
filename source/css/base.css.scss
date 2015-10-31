@@ -1,9 +1,32 @@
 $img-padding: 20px;
 
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
+    margin-bottom: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #F8F8F8;
+    // border-color: #E7E7E7;
+    // border-radius: 4px;
+    // border: 1px solid transparent;
+}
+
+body, blockquote {
     font-family: Georgia, serif;
     font-size: 16px;
+}
+
+.license {
+    font-size: 14px;
 }
 
 .laurie-img {
